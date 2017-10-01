@@ -13,7 +13,7 @@ public class PingTTL {
         try {
             Process p = Runtime.getRuntime().exec(command+" "+ipAdress);
             BufferedReader inputStream = new BufferedReader(
-                    new InputStreamReader(p.getInputStream()));
+                    new InputStreamReader(p.getInputStream(), "cp866"));
 
             String s = "";
             // reading output stream of the command
@@ -21,6 +21,7 @@ public class PingTTL {
             while ((s = inputStream.readLine()) != null) {
                 numString++;
                 if (numString == 12) {
+                    System.out.println(s);
 
                     for (String str : s.split(" ")) {
                         if ( !(str.length() == 0) &&Character.isDigit(str.charAt(0))){

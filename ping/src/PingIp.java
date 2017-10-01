@@ -14,7 +14,7 @@ public class PingIp {
         pingTTL.runSystemCommand("ping", "8.8.8.8" );
         pingTTL.runSystemCommand("ping", "127.0.0.1" );
         pingTTL.runSystemCommand("ping", "192.168.0.1" );
-        pingTTL.runSystemCommand("ping", "oldschool44.runescape.com" );
+        //pingTTL.runSystemCommand("ping", "oldschool44.runescape.com" );
 
     }
 }
